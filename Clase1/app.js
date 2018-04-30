@@ -1,13 +1,9 @@
 "use strict";
-function activar(quien, objeto, momento) {
-    if (objeto === void 0) { objeto = "batiseñal"; }
-    var mensaje;
-    if (momento) {
-        mensaje = quien + " activo la " + objeto + " en la " + momento;
+var hulk = {
+    nombre: "Hulk",
+    smash: function () {
+        var _this = this;
+        setTimeout(function () { return console.log(_this.nombre + " smash!!"); }, 1500);
     }
-    else {
-        mensaje = quien + " activo la " + objeto;
-    }
-    alert(mensaje);
-}
-activar("Alver", "señal", "1pm");
+};
+hulk.smash();
