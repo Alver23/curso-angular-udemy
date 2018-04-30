@@ -1,27 +1,13 @@
 "use strict";
-function saludar(nombre) {
-    alert("Hola " + nombre.toUpperCase());
+function activar(quien, objeto, momento) {
+    if (objeto === void 0) { objeto = "batiseñal"; }
+    var mensaje;
+    if (momento) {
+        mensaje = quien + " activo la " + objeto + " en la " + momento;
+    }
+    else {
+        mensaje = quien + " activo la " + objeto;
+    }
+    alert(mensaje);
 }
-var wolverine = {
-    nombre: "Logan"
-};
-saludar(wolverine.nombre);
-var nombre = "Peter";
-var numero = 123;
-var bool = true;
-var hoy = new Date();
-hoy = new Date('2020-10-21');
-var cualquiera;
-cualquiera = nombre;
-cualquiera = numero;
-cualquiera = bool;
-cualquiera = hoy;
-var spiderman = {
-    nombre: "Peter",
-    edad: 20,
-};
-spiderman = {
-    nombre: "Juan",
-    edad: 30,
-    apellido: "perez",
-};
+activar("Alver", "señal", "1pm");
