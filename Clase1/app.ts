@@ -1,20 +1,18 @@
-interface Xmen {
-    nombre:string,
-    poder:string,
-};
+class Avenger {
+    nombre:string = "sin nombre!";
+    equipo:string = "";
+    nombreReal:string = "";
 
-function enviarMision(xmen: {nombre:string}) {
-    console.log(`Enviando a: ${xmen.nombre}`)
-};
+    puedePelear:boolean = false;
+    peleasGanadas:number = 0;
 
-function enviarCuartel(xmen: Xmen) {
-    console.log(`Enviando a cuartel: ${xmen.nombre}`)
+    constructor( nombre:string, equipo:string, nombreReal:string) {
+        this.nombre = nombre;
+        this.equipo = equipo;
+        this.nombreReal = nombreReal
+    }
 }
 
-let wolverine = {
-    nombre: "Wolverine",
-    poder: "Regenracion"
-};
+let antman:Avenger = new Avenger("Atman", "Real Madrid", "Men");
 
-enviarMision(wolverine);
-enviarCuartel(wolverine);
+console.log(antman);
