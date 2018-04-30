@@ -1,17 +1,13 @@
-"use strict";
-/* let avenger = {
-    nombre: "Steve",
-    clave: "Capitan America",
-    poder: "Droga",
-};
+let prom1 = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log("Promesa terminada")
 
- let nombre:string = avenger.nombre;
-let clave:string = avenger.clave;
-let poder:string = avenger.poder;
-// let { poder:string } = avenger; => string queda como alias de poder
+        // Termina bien
+        resolve();
 
-let { poder, nombre, clave } = avenger; */
-var avenger = ["Thor", "Steve", "Tony"];
-// let [ thor, steve, iroman ] = avenger; // Debe ser secuencial par tomar los valores
-var iroman = avenger[2];
-console.log(iroman);
+        // Termina mal
+        //reject();
+    }, 1500);
+})
+prom1.then(() => console.log("Ejecutarme si todo sale bien"))
+.catch((err) => console.log("Ejecutarme si todo sale mal"))
