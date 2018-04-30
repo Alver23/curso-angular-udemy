@@ -1,19 +1,20 @@
-/* let avenger = {
-    nombre: "Steve",
-    clave: "Capitan America",
-    poder: "Droga",
+interface Xmen {
+    nombre:string,
+    poder:string,
 };
 
- let nombre:string = avenger.nombre;
-let clave:string = avenger.clave;
-let poder:string = avenger.poder;
-// let { poder:string } = avenger; => string queda como alias de poder
+function enviarMision(xmen: {nombre:string}) {
+    console.log(`Enviando a: ${xmen.nombre}`)
+};
 
-let { poder, nombre, clave } = avenger; */
+function enviarCuartel(xmen: Xmen) {
+    console.log(`Enviando a cuartel: ${xmen.nombre}`)
+}
 
-let avenger:string[] = ["Thor", "Steve", "Tony"];
+let wolverine = {
+    nombre: "Wolverine",
+    poder: "Regenracion"
+};
 
-// let [ thor, steve, iroman ] = avenger; // Debe ser secuencial par tomar los valores
-let [ , , iroman ] = avenger;
-
-console.log(iroman);
+enviarMision(wolverine);
+enviarCuartel(wolverine);
