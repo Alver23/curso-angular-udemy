@@ -1,0 +1,8 @@
+<div class="card">
+  <img class="card-img-top" *ngIf="card.image " [src]="card.image" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ card.title }}</h5>
+    <p class="card-text text-truncate">{{ card.text }}</p>
+    <button type="button" class="btn btn-outline-primary" routerLink="/movie/{{ card.id }}">View Movie</button>
+  </div>
+</div>

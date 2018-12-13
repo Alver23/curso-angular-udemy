@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Movies Populars</h3>
+    <hr class="border-primary">
+    <app-loading *ngIf="!pupulars"></app-loading>
+    <div class="card-columns animated fadeIn" *ngIf="pupulars">
+      <app-card *ngFor="let popular of pupulars | slice: 0:6" [card]="popular | movieTransform"></app-card>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <h3>Movies Current</h3>
+    <hr class="border-primary">
+    <app-loading *ngIf="!moviesCurrent"></app-loading>
+    <div class="card-columns animated fadeIn" *ngIf="moviesCurrent">
+      <app-card *ngFor="let current of moviesCurrent | slice: 0:6" [card]="current | movieTransform"></app-card>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <h3>Movies Child</h3>
+    <hr class="border-primary">
+    <app-loading *ngIf="!moviesChild"></app-loading>
+    <div class="card-columns animated fadeIn" *ngIf="moviesChild">
+      <app-card *ngFor="let child of moviesChild | slice: 0:6" [card]="child | movieTransform"></app-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<app-loading *ngIf="!movie"></app-loading>
+<div class="row" *ngIf="movie">
+  <div class="col-md-6">
+    <img class="img-thumbnail img-fluid" *ngIf="movie.image " src="{{ movie.image }}" [alt]="movie.title">
+  </div>
+  <div class="col-md-6">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.overview }}</p>
+    <div *ngIf="movie.tagline">
+      <h4>Famous phrase</h4>
+      <p> {{ movie.tagline }}</p>
+    </div>
+    <p>
+      <b>Popularity: </b>
+      <span class="badge badge-primary">{{ movie.popularity | number: '.0-0' }}</span>
+    </p>
+    <p>
+      <b>Votes: </b>
+      <span class="badge badge-primary">{{ movie.vote_average }}</span>
+    </p>
+    <button type="button" class="btn btn-outline-danger" (click)="goBack()">Back</button>
+  </div>
+</div>
